@@ -18,7 +18,9 @@ public class ProductsServiceImpl implements IProductService {
     @Override
     @Transactional(readOnly = true)
     public List<Product> findALL() {
-        return productRepository.findAll();
+    	
+    	List<Product> list = productRepository.findAll();
+    	return list;
     }
 
     @Override
